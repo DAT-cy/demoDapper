@@ -1,0 +1,14 @@
+D:\NET\WebApplication1\ClassLibrary1.DAL\bin\Debug\net8.0\ClassLibrary1.DAL.deps.json
+D:\NET\WebApplication1\ClassLibrary1.DAL\bin\Debug\net8.0\ClassLibrary1.DAL.dll
+D:\NET\WebApplication1\ClassLibrary1.DAL\bin\Debug\net8.0\ClassLibrary1.DAL.pdb
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ClassLibrary1.DAL.csproj.AssemblyReference.cache
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ClassLibrary1.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ClassLibrary1.DAL.AssemblyInfoInputs.cache
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ClassLibrary1.DAL.AssemblyInfo.cs
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ClassLibrary1.DAL.csproj.CoreCompileInputs.cache
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ClassLibrary1.DAL.sourcelink.json
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ClassLibrary1.DAL.dll
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\refint\ClassLibrary1.DAL.dll
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ClassLibrary1.DAL.pdb
+D:\NET\WebApplication1\ClassLibrary1.DAL\obj\Debug\net8.0\ref\ClassLibrary1.DAL.dll
+D:\NET\WebApplication1\ClassLibrary1.DAL\bin\Debug\net8.0\XML\Dapper.xml

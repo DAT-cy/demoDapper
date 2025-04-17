@@ -1,0 +1,4 @@
+[2025-04-16 15:53:08.626 INF] Now listening on: http://localhost:5000
+[2025-04-16 15:53:08.659 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-16 15:53:08.661 INF] Hosting environment: Production
+[2025-04-16 15:53:08.662 INF] Content root path: D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0

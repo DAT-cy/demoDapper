@@ -1,0 +1,214 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\NET\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4ACC6EA7-EECC-452E-863A-6D640F2D2690}|WebApplication1\\WebApplication1.csproj|d:\\net\\webapplication1\\webapplication1\\webapplication1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4ACC6EA7-EECC-452E-863A-6D640F2D2690}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\webapplication1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE1F856-4396-4867-9F4E-48CD9D0D32E6}|ClassLibrary1.DAL\\ClassLibrary1.DAL.csproj|d:\\net\\webapplication1\\classlibrary1.dal\\classlibrary1.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DBE1F856-4396-4867-9F4E-48CD9D0D32E6}|ClassLibrary1.DAL\\ClassLibrary1.DAL.csproj|solutionrelative:classlibrary1.dal\\classlibrary1.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE1F856-4396-4867-9F4E-48CD9D0D32E6}|ClassLibrary1.DAL\\ClassLibrary1.DAL.csproj|d:\\net\\webapplication1\\classlibrary1.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBE1F856-4396-4867-9F4E-48CD9D0D32E6}|ClassLibrary1.DAL\\ClassLibrary1.DAL.csproj|solutionrelative:classlibrary1.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\Worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\Worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\Helper\\DbConnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\Helper\\DbConnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\Helper\\SqlQueryLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\Helper\\SqlQueryLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\Repository\\IStaffRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\Repository\\IStaffRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\XML\\Staff.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\XML\\Staff.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NET\\WebApplication1\\WorkerService1.DAL\\Repository\\StaffRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkerService1.DAL\\Repository\\StaffRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebApplication1.csproj",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+              "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.csproj",
+              "ToolTip": "D:\\NET\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+              "RelativeToolTip": "WebApplication1\\WebApplication1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-16T09:58:16.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClassLibrary1.DAL.csproj",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\ClassLibrary1.DAL\\ClassLibrary1.DAL.csproj",
+              "RelativeDocumentMoniker": "ClassLibrary1.DAL\\ClassLibrary1.DAL.csproj",
+              "ToolTip": "D:\\NET\\WebApplication1\\ClassLibrary1.DAL\\ClassLibrary1.DAL.csproj",
+              "RelativeToolTip": "ClassLibrary1.DAL\\ClassLibrary1.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-16T09:57:46.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\ClassLibrary1.DAL\\Class1.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1.DAL\\Class1.cs",
+              "ToolTip": "D:\\NET\\WebApplication1\\ClassLibrary1.DAL\\Class1.cs",
+              "RelativeToolTip": "ClassLibrary1.DAL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:57:38.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\appsettings.json",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\appsettings.json",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\appsettings.json",
+              "RelativeToolTip": "WorkerService1.DAL\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-16T09:36:37.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Program.cs",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\Program.cs",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Program.cs",
+              "RelativeToolTip": "WorkerService1.DAL\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:36:31.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Worker.cs",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\Worker.cs",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Worker.cs",
+              "RelativeToolTip": "WorkerService1.DAL\\Worker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:34:47.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WorkerService1.DAL\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-16T09:34:41.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DbConnection.cs",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Helper\\DbConnection.cs",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\Helper\\DbConnection.cs",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Helper\\DbConnection.cs",
+              "RelativeToolTip": "WorkerService1.DAL\\Helper\\DbConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:27:30.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SqlQueryLoader.cs",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Helper\\SqlQueryLoader.cs",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\Helper\\SqlQueryLoader.cs",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Helper\\SqlQueryLoader.cs",
+              "RelativeToolTip": "WorkerService1.DAL\\Helper\\SqlQueryLoader.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:27:22.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IStaffRepository.cs",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Repository\\IStaffRepository.cs",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\Repository\\IStaffRepository.cs",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Repository\\IStaffRepository.cs",
+              "RelativeToolTip": "WorkerService1.DAL\\Repository\\IStaffRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:27:21.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Staff.xml",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\XML\\Staff.xml",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\XML\\Staff.xml",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\XML\\Staff.xml",
+              "RelativeToolTip": "WorkerService1.DAL\\XML\\Staff.xml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-04-16T09:25:28.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StaffRepository.cs",
+              "DocumentMoniker": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Repository\\StaffRepository.cs",
+              "RelativeDocumentMoniker": "WorkerService1.DAL\\Repository\\StaffRepository.cs",
+              "ToolTip": "D:\\NET\\WebApplication1\\WorkerService1.DAL\\Repository\\StaffRepository.cs",
+              "RelativeToolTip": "WorkerService1.DAL\\Repository\\StaffRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:25:25.437Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
