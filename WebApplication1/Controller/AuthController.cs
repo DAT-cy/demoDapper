@@ -1,5 +1,4 @@
 ﻿using ClassLibrary1.DAL.common;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Dto;
 using WebApplication1.Service.AuthService;
@@ -11,14 +10,13 @@ namespace WebApplication1.Controller;
 public class AuthController
 {
     private readonly IAuthService _authService;
-    private readonly ILogger<AuthController> _logger;
+    
     
     public AuthController(
-        IAuthService authService,
-        ILogger<AuthController> logger)
+        IAuthService authService
+)
     {
         _authService = authService;
-        _logger = logger;
     }
 
     [HttpPost("login")]

@@ -194,4 +194,8 @@ D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\win-x64\native\
 D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\ClassLibrary1.DAL.dll
 D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\ClassLibrary1.DAL.pdb
-D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\XML\Dapper.xml
+D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\ClassLibrary1.Auth.dll
+D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\ClassLibrary1.Auth.pdb
+D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\XML\User.xml
+D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\XML\Department.xml
+D:\NET\WebApplication1\WebApplication1\bin\Debug\net8.0\XML\Staff.xml

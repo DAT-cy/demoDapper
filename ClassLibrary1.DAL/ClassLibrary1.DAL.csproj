@@ -13,7 +13,7 @@
 
   </ItemGroup>
   <ItemGroup>
-    <Content Include="XML\Dapper.xml">
+    <Content Include="XML\**\*.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

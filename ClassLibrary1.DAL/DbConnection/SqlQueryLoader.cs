@@ -7,21 +7,28 @@ public class SqlQueryLoader
 {
     public string GetQueryFromXml(string queryName)
     {
-        // Lấy đường dẫn đến file XML
-        var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        var xmlPath = Path.Combine(basePath!, "XML", "Dapper.xml");
+        // Lấy đường dẫn đến thư mục chứa file XML (nằm trong output)
+        var basePath = Path.Combine(AppContext.BaseDirectory, "XML");
 
-        if (!File.Exists(xmlPath))
-            throw new FileNotFoundException($"XML file not found at: {xmlPath}");
+        if (!Directory.Exists(basePath))
+            throw new DirectoryNotFoundException($"XML folder not found at: {basePath}");
 
-        // Đọc file XML
-        var xml = XDocument.Load(xmlPath);
+        // Lấy tất cả file .xml trong thư mục
+        var xmlFiles = Directory.GetFiles(basePath, "*.xml");
 
-        // Tìm thẻ chứa câu truy vấn dựa trên tên truy vấn
-        var queryElement = xml.Descendants()
-            .FirstOrDefault(x => x.Name.LocalName == queryName);
+        foreach (var file in xmlFiles)
+        {
+            var xml = XDocument.Load(file);
 
-        // Nếu tìm thấy câu truy vấn, trả về giá trị của nó, nếu không sẽ ném ngoại lệ
-        return queryElement?.Value.Trim() ?? throw new Exception($"Query '{queryName}' not found in XML file.");
+            var queryElement = xml.Descendants()
+                .FirstOrDefault(x => x.Name.LocalName == queryName);
+
+            if (queryElement != null)
+            {
+                return queryElement.Value.Trim();
+            }
+        }
+
+        throw new Exception($"Query '{queryName}' not found in any XML file in {basePath}");
     }
 }

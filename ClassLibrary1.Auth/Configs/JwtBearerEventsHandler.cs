@@ -1,16 +1,13 @@
 ﻿using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
 public class JwtBearerEventsHandler
 {
     
-    private readonly ILogger<JwtBearerEventsHandler> _logger;
-    public JwtBearerEventsHandler(ILogger<JwtBearerEventsHandler> logger)
-    {
-        _logger = logger;
-    }
+
     public static  Action<JwtBearerOptions> GetJwtBearerOptions(IConfiguration configuration)
     {
         return options =>

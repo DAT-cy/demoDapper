@@ -3,6 +3,7 @@
     public static readonly ErrorCode STAFF_NOT_FOUND = new ErrorCode(404, "STAFF_NOT_DOUND", "STAFF NOT FOUND");
     public static readonly ErrorCode API_NOT_FOUND = new ErrorCode(404, "API not found", "API không tồn tại");
     public static readonly ErrorCode DEPARTMENT_NOT_FOUND = new ErrorCode(404, "DEPARTMENT_NOT_DOUND", "DEPARTMENT NOT FOUND");
+    public static readonly ErrorCode USER_NOT_FOUND = new ErrorCode(404, "USER_NOT_DOUND", "USER NOT FOUND");
 
     
     public int StatusCode { get; }

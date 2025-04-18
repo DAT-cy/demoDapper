@@ -1,0 +1,71 @@
+﻿<root>
+    <select>
+        <getAllDepartments>
+            SELECT
+            id_department as Id,
+            name_department as nameDepartment ,
+            status as status,
+            code as code ,
+            description as description
+            FROM demo_ef.tbl_department
+            where is_deleted = false
+            ;
+        </getAllDepartments>
+
+        <getDepartmentById>
+            SELECT
+            id_department as Id,
+            name_department as nameDepartment ,
+            status as status,
+            code as code ,
+            description as description
+            FROM demo_ef.tbl_department
+            where is_deleted = false and id_department = @Id
+            ;
+        </getDepartmentById>
+
+    </select>
+
+
+    <insert>
+        <insert>
+            <createDepartment>
+                INSERT INTO tbl_department (
+                name_department,
+                status,
+                code,
+                description,
+                created_at,
+                is_deleted
+                )
+                VALUES (
+                @NameDepartment,
+                @Status,
+                @Code,
+                @Description,
+                NOW(),
+                false
+                );
+
+            </createDepartment>
+        </insert>
+
+    </insert>
+
+    <update>
+        <updateDepartment>
+            UPDATE tbl_department
+            SET name_department = @NameDepartment,
+            status = @Status,
+            code = @Code,
+            description = @Description
+            WHERE id_department = @Id AND is_deleted = 0
+        </updateDepartment>
+    </update>
+
+    <delete>
+        <deleteDepartment>
+            DELETE FROM tbl_department WHERE id_department = @Id
+        </deleteDepartment>
+    </delete>
+</root>

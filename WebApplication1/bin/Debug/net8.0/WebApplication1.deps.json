@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "WebApplication1/1.0.0": {
         "dependencies": {
+          "ClassLibrary1.Auth": "1.0.0",
           "ClassLibrary1.DAL": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.0",
@@ -1601,6 +1602,19 @@
           }
         }
       },
+      "ClassLibrary1.Auth/1.0.0": {
+        "dependencies": {
+          "ClassLibrary1.DAL": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.0"
+        },
+        "runtime": {
+          "ClassLibrary1.Auth.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "ClassLibrary1.DAL/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -2559,6 +2573,11 @@
       "sha512": "sha512-Idgg+mJEyAujqDPzA3APy9dNoyw0YQcNA65GgYjktDRtJ+nvx/hv+J+m6Eax3JJMGEYGy04oc5YNP6ZvQ3Y1vQ==",
       "path": "zstdsharp.port/0.7.1",
       "hashPath": "zstdsharp.port.0.7.1.nupkg.sha512"
+    },
+    "ClassLibrary1.Auth/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "ClassLibrary1.DAL/1.0.0": {
       "type": "project",

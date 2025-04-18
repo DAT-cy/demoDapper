@@ -1,8 +1,7 @@
 
-using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
+
 using Serilog;
 using WebApplication1.Configs;
 using WebApplication1.Data;
@@ -73,7 +72,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //Register Repositories 
 builder.Services.AddScoped<DepartmentRepository>();
 builder.Services.AddScoped<StaffRepository>();
-builder.Services.AddScoped<AuthRepository>();
 
 
 // Register services
