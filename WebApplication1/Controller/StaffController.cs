@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Dto;
 using WebApplication1.Model;
@@ -17,6 +18,7 @@ namespace WebApplication1.Controller
             this.staffService = staffService;
         }
 
+
         [HttpPost]
         public async Task<ActionResult<StaffDto>> CreateDepartment([FromBody] StaffModel staffModel)
         {
@@ -24,7 +26,6 @@ namespace WebApplication1.Controller
             return Ok(staffDto); // Bọc trong Ok()
         }
         
-        [Authorize(Roles = "ADMIN")]
         [HttpGet]
         public async Task<ActionResult<List<StaffDto>>> GetALLDepartment()
         {

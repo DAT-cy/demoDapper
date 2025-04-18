@@ -19,30 +19,35 @@ public class JwtService : IJwtService
     {
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
         var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-        var vietnamTimeZone = TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time");
-        var vietnamTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, vietnamTimeZone);
 
         var claims = new List<Claim>
         {
-            new(JwtRegisteredClaimNames.Sub, username),
-            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new(JwtRegisteredClaimNames.Iat, 
-                new DateTimeOffset(vietnamTime).ToUnixTimeSeconds().ToString(), 
-                ClaimValueTypes.Integer64),
-            new("role", "ADMIN")
+            new Claim(JwtRegisteredClaimNames.Sub, username),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
+        
 
+        // Add extra claims
         if (additionalClaims != null)
         {
             foreach (var pair in additionalClaims)
             {
-                claims.Add(new Claim(pair.Key, pair.Value?.ToString() ?? ""));
-            }
+                if (pair.Value is List<string> roleList)
+                {
+                    foreach (var role in roleList)
+                    {
+                        claims.Add(new Claim(ClaimTypes.Role, role));
+                    }
+                }
+                else
+                {
+                    claims.Add(new Claim(pair.Key, pair.Value.ToString()));
+                }            }
         }
 
         var token = new JwtSecurityToken(
             claims: claims,
-            expires: vietnamTime.AddMinutes(_expireMinutes),
+            expires: DateTime.UtcNow.AddMinutes(_expireMinutes),
             signingCredentials: credentials
         );
 

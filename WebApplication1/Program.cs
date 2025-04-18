@@ -1,6 +1,5 @@
 
 using System.Text;
-using System.Text.Json;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -27,43 +26,11 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 
 // Add JWT configuration
-var jwtSettings = builder.Configuration.GetSection("JwtSettings");
-builder.Services.Configure<JwtSettings>(jwtSettings);
 
 // Add this after the JWT settings configuration
 // JWT Configuration trong Program.cs
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.SaveToken = true;
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"])),
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidateLifetime = true,
-            ClockSkew = TimeSpan.Zero,
-            RoleClaimType = "ROLE" // Make sure this matches your token's role claim type
-        };
-    });
-
-// Trong phần builder.Services
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("RequireAdmin", policy =>
-        policy.RequireRole(Roles.Admin));
-    options.AddPolicy("RequireManager", policy =>
-        policy.RequireRole(Roles.Manager, Roles.Admin));
-    options.AddPolicy("RequireStaff", policy =>
-        policy.RequireRole(Roles.Staff, Roles.Manager, Roles.Admin));
-});
-
-builder.Services.AddAuthorization();
 builder.Services.AddScoped<IJwtService, JwtService>();
 
-builder.Services.AddScoped<IJwtService, JwtService>();
 // Get connection string
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -80,8 +47,11 @@ builder.Services.AddScoped<ClassLibrary1.DAL.DbConnection.SqlQueryLoader>();
 builder.Services.AddScoped<ClassLibrary1.DAL.DALService.IStaffService, WorkerService1.DAL.DALService.StaffService>();
 builder.Services.AddScoped<ClassLibrary1.DAL.DALDepartmentService.IDepartmentService, ClassLibrary1.DAL.DALDepartmentService.DepartmentService>();
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(JwtBearerEventsHandler.GetJwtBearerOptions(builder.Configuration));
 
-
+// Thêm Authorization (bắt buộc nếu dùng [Authorize])
+builder.Services.AddAuthorization();
 //configure AppDbContext
 builder.Services.AddControllers(options =>
 {
@@ -166,11 +136,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "BaseApi v1"); });
 }
-app.UseMiddleware<AuthorizationMiddleware>();
-app.UseHttpsRedirection();
-app.UseAuthentication(); // Must come before UseAuthorization
+app.UseAuthentication(); 
 app.UseAuthorization();
-app.UseMiddleware<AuthorizationMiddleware>();
 app.MapControllers();
 app.Run();
 

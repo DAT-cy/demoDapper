@@ -1,12 +1,15 @@
-﻿using ClassLibrary1.DAL.common;
+﻿using System.Security.Claims;
+using ClassLibrary1.DAL.common;
 using ClassLibrary1.DAL.DALService;
 using ClassLibrary1.DAL.DTOS;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Entity;
 
 namespace WebApplication1.Controller;
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
+
 public class DALStaffController : ControllerBase
 {
     
@@ -16,7 +19,16 @@ public class DALStaffController : ControllerBase
     {
         _staffRepo = staffRepo;
     }
+    
+    [Authorize]
+    [HttpGet("check-roles")]
+    public IActionResult CheckRoles()
+    {
+        var roles = User.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+        return Ok(new { roles });
+    }
 
+    [Authorize(Roles = "ADMIN")]
     [HttpGet("sql")]
     public async Task<ActionResult<IEnumerable<StaffEntity>>> GetAllFromSql()
     {
@@ -30,6 +42,7 @@ public class DALStaffController : ControllerBase
             return StatusCode(500, $"Internal server error: {ex.Message}");
         }
     }
+
 
     [HttpDelete("{id}")]
     public async Task<ActionResult<IEnumerable<Boolean>>> DeleteStaff(long id)
