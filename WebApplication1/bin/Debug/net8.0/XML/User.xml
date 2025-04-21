@@ -1,0 +1,11 @@
+﻿<root>
+    <select>
+        <getUserByUserNameAndPassword>
+            select
+            username as Username,
+            password as Password
+            from users
+            where username = @username and password = @password
+        </getUserByUserNameAndPassword>
+    </select>
+</root>

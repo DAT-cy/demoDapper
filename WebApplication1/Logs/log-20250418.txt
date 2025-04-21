@@ -1,0 +1,811 @@
+[2025-04-18 08:28:06.256 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 08:28:06.420 INF] Now listening on: https://localhost:7101
+[2025-04-18 08:28:06.421 INF] Now listening on: http://localhost:5230
+[2025-04-18 08:28:06.424 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 08:28:06.425 INF] Hosting environment: Development
+[2025-04-18 08:28:06.426 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 08:28:06.752 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 08:28:06.987 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 233.2595ms
+[2025-04-18 08:28:07.966 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 08:28:08.080 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 113.9095ms
+[2025-04-18 08:28:11.269 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 08:28:11.405 INF] Roles: 
+[2025-04-18 08:28:11.406 WRN] User is not authenticated
+[2025-04-18 08:28:11.407 INF] Authorization header: 
+[2025-04-18 08:28:11.913 INF] Roles: 
+[2025-04-18 08:28:11.914 WRN] User is not authenticated
+[2025-04-18 08:28:11.914 INF] Authorization header: 
+[2025-04-18 08:28:11.917 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 08:28:11.940 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 08:28:12.459 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 08:28:13.174 INF] Executed DbCommand (48ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 08:28:13.298 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 834.0052ms.
+[2025-04-18 08:28:13.306 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 08:28:13.320 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1374.5678ms
+[2025-04-18 08:28:13.321 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 08:28:13.332 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 2063.1463ms
+[2025-04-18 08:28:26.148 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 08:28:26.152 INF] Roles: 
+[2025-04-18 08:28:26.153 WRN] User is not authenticated
+[2025-04-18 08:28:26.153 INF] Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmciLCJqdGkiOiIzNGM3ODRkMS1lMWE0LTRlNzEtOTQ5Yy1hODRlNmVlYTUxZjUiLCJpYXQiOjE3NDQ5Mzk2OTMsInJvbGUiOiJBRE1JTiIsIlVzZXJJZCI6IjEiLCJleHAiOjE3NDQ5NDMyOTN9.eMC7rHiUv1yv7oKBgxFmkIjudE5MtPmThoeicZ7cRAI
+[2025-04-18 08:28:26.158 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 08:28:26.166 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 08:28:26.167 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 19.5537ms
+[2025-04-18 08:28:28.023 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 08:28:28.025 INF] Roles: 
+[2025-04-18 08:28:28.026 WRN] User is not authenticated
+[2025-04-18 08:28:28.027 INF] Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmciLCJqdGkiOiIzNGM3ODRkMS1lMWE0LTRlNzEtOTQ5Yy1hODRlNmVlYTUxZjUiLCJpYXQiOjE3NDQ5Mzk2OTMsInJvbGUiOiJBRE1JTiIsIlVzZXJJZCI6IjEiLCJleHAiOjE3NDQ5NDMyOTN9.eMC7rHiUv1yv7oKBgxFmkIjudE5MtPmThoeicZ7cRAI
+[2025-04-18 08:28:28.032 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 08:28:28.033 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 08:28:28.033 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 9.9403ms
+[2025-04-18 08:32:27.599 INF] Application is shutting down...
+[2025-04-18 08:41:09.991 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 08:41:10.195 INF] Now listening on: https://localhost:7101
+[2025-04-18 08:41:10.196 INF] Now listening on: http://localhost:5230
+[2025-04-18 08:41:10.199 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 08:41:10.200 INF] Hosting environment: Development
+[2025-04-18 08:41:10.201 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 08:41:10.575 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 08:41:10.841 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 267.6467ms
+[2025-04-18 08:41:11.699 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 08:41:11.849 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.4611ms
+[2025-04-18 08:41:16.976 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 08:41:17.068 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 08:41:17.092 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 08:41:17.465 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 08:41:18.336 INF] Executed DbCommand (24ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 08:41:18.448 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 979.4263ms.
+[2025-04-18 08:41:18.456 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 08:41:18.471 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1373.2715ms
+[2025-04-18 08:41:18.472 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 08:41:18.483 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1506.5974ms
+[2025-04-18 08:41:49.140 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 08:41:49.151 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 08:41:49.156 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 08:41:49.157 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 16.947ms
+[2025-04-18 08:41:51.197 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 08:41:51.200 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 08:41:51.201 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 08:41:51.203 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 6.1132ms
+[2025-04-18 08:57:13.348 INF] Now listening on: https://localhost:7101
+[2025-04-18 08:57:13.376 INF] Now listening on: http://localhost:5230
+[2025-04-18 08:57:13.379 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 08:57:13.380 INF] Hosting environment: Development
+[2025-04-18 08:57:13.380 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 08:57:13.912 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 08:57:14.071 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 159.3204ms
+[2025-04-18 08:57:14.482 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 08:57:14.667 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 185.1509ms
+[2025-04-18 08:57:18.217 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 08:57:18.224 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 08:57:18.250 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 08:57:18.527 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 08:57:19.232 INF] Executed DbCommand (32ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 08:57:19.334 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 802.3399ms.
+[2025-04-18 08:57:19.344 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 08:57:19.363 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1107.6444ms
+[2025-04-18 08:57:19.364 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 08:57:19.377 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1159.5583ms
+[2025-04-18 09:00:21.459 INF] Application is shutting down...
+[2025-04-18 09:00:24.955 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:00:24.982 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:00:24.985 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:00:24.986 INF] Hosting environment: Development
+[2025-04-18 09:00:24.986 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:00:25.447 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:00:25.607 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 160.0756ms
+[2025-04-18 09:00:26.087 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:00:26.294 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 206.7767ms
+[2025-04-18 09:00:29.224 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:00:29.233 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:00:29.253 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:00:29.487 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:00:30.164 INF] Executed DbCommand (32ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:00:30.263 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 771.3086ms.
+[2025-04-18 09:00:30.269 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:00:30.282 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1024.986ms
+[2025-04-18 09:00:30.282 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:00:30.290 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1066.3581ms
+[2025-04-18 09:05:37.371 INF] Application is shutting down...
+[2025-04-18 09:10:13.196 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:10:13.346 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:10:13.347 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:10:13.350 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:10:13.351 INF] Hosting environment: Development
+[2025-04-18 09:10:13.351 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:10:13.897 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:10:14.089 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 193.5737ms
+[2025-04-18 09:10:14.663 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:10:14.879 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 215.8447ms
+[2025-04-18 09:10:17.635 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:10:17.668 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:10:17.687 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:10:17.943 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:10:18.622 INF] Executed DbCommand (35ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:10:18.713 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 765.8652ms.
+[2025-04-18 09:10:18.720 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:10:18.732 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1040.9024ms
+[2025-04-18 09:10:18.732 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:10:18.742 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1106.0706ms
+[2025-04-18 09:10:31.963 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 09:10:31.975 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:10:31.981 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:10:31.982 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 18.9196ms
+[2025-04-18 09:10:37.170 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 09:10:37.176 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:10:37.178 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:10:37.179 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 9.4251ms
+[2025-04-18 09:11:53.626 INF] Application is shutting down...
+[2025-04-18 09:11:57.753 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:11:57.870 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:11:57.871 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:11:57.874 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:11:57.875 INF] Hosting environment: Development
+[2025-04-18 09:11:57.875 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:11:58.288 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:11:58.449 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 160.6819ms
+[2025-04-18 09:11:59.072 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:11:59.252 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 180.2978ms
+[2025-04-18 09:12:04.173 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:12:04.200 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:12:04.219 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:12:04.451 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:12:05.155 INF] Executed DbCommand (32ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:12:05.240 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 784.5749ms.
+[2025-04-18 09:12:05.246 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:12:05.260 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1036.4912ms
+[2025-04-18 09:12:05.261 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:12:05.270 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1096.5671ms
+[2025-04-18 09:12:15.267 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 09:12:15.275 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:12:15.282 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:12:15.283 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 16.3404ms
+[2025-04-18 09:13:14.793 INF] Application is shutting down...
+[2025-04-18 09:15:03.146 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:15:03.269 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:15:03.270 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:15:03.273 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:15:03.274 INF] Hosting environment: Development
+[2025-04-18 09:15:03.274 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:15:03.784 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:15:03.938 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 155.9042ms
+[2025-04-18 09:15:04.355 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:15:04.503 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 147.6789ms
+[2025-04-18 09:15:07.723 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:15:07.751 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:15:07.770 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:15:08.014 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:15:08.693 INF] Executed DbCommand (32ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:15:08.788 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 768.806ms.
+[2025-04-18 09:15:08.795 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:15:08.808 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1034.1684ms
+[2025-04-18 09:15:08.809 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:15:08.819 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1096.1642ms
+[2025-04-18 09:15:23.231 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 09:15:23.240 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:15:23.244 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:15:23.245 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 13.5345ms
+[2025-04-18 09:20:57.650 INF] Application is shutting down...
+[2025-04-18 09:22:13.209 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:22:13.326 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:22:13.328 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:22:13.330 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:22:13.331 INF] Hosting environment: Development
+[2025-04-18 09:22:13.331 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:22:13.765 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:22:13.922 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 157.1768ms
+[2025-04-18 09:22:14.458 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:22:14.671 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 212.1647ms
+[2025-04-18 09:22:17.313 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:22:17.340 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:22:17.359 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:22:17.602 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:22:18.280 INF] Executed DbCommand (32ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:22:18.367 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 761.2251ms.
+[2025-04-18 09:22:18.374 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:22:18.388 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1025.3587ms
+[2025-04-18 09:22:18.389 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:22:18.397 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1083.7802ms
+[2025-04-18 09:22:40.960 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 09:22:40.969 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:22:40.973 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:22:40.974 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 14.0422ms
+[2025-04-18 09:23:45.858 INF] Application is shutting down...
+[2025-04-18 09:23:49.427 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:23:49.548 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:23:49.551 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:23:49.555 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:23:49.556 INF] Hosting environment: Development
+[2025-04-18 09:23:49.557 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:23:50.041 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:23:50.193 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 153.4071ms
+[2025-04-18 09:23:50.768 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:23:50.950 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 182.7672ms
+[2025-04-18 09:23:58.101 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:23:58.132 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:23:58.151 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:23:58.398 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:23:59.061 INF] Executed DbCommand (31ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:23:59.149 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 745.9491ms.
+[2025-04-18 09:23:59.156 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:23:59.168 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1012.8373ms
+[2025-04-18 09:23:59.169 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:23:59.177 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1076.096ms
+[2025-04-18 09:24:07.951 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 09:24:07.960 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:24:07.965 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:24:07.967 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 15.4511ms
+[2025-04-18 09:24:30.067 INF] Request starting HTTP/2 POST https://localhost:7101/api/Staff - application/json 142
+[2025-04-18 09:24:30.073 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:24:30.074 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:24:30.075 INF] Request finished HTTP/2 POST https://localhost:7101/api/Staff - 401 0 null 8.0038ms
+[2025-04-18 09:24:59.553 INF] Application is shutting down...
+[2025-04-18 09:25:04.285 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:25:04.483 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:25:04.485 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:25:04.488 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:25:04.489 INF] Hosting environment: Development
+[2025-04-18 09:25:04.489 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:25:05.053 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:25:05.263 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 213.7252ms
+[2025-04-18 09:25:06.463 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:25:06.589 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 125.6927ms
+[2025-04-18 09:25:12.948 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:25:13.024 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:25:13.046 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:25:13.432 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:25:14.217 INF] Executed DbCommand (24ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:25:14.332 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 894.2227ms.
+[2025-04-18 09:25:14.340 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:25:14.355 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1303.1409ms
+[2025-04-18 09:25:14.356 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:25:14.366 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1418.4099ms
+[2025-04-18 09:25:23.902 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 09:25:23.911 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:25:23.918 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:25:23.919 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 17.1081ms
+[2025-04-18 09:36:17.604 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:36:17.607 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:36:17.608 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:36:17.620 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:36:17.638 INF] Executed DbCommand (1ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:36:17.641 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 20.3068ms.
+[2025-04-18 09:36:17.642 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:36:17.643 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 34.1762ms
+[2025-04-18 09:36:17.644 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:36:17.645 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 40.8792ms
+[2025-04-18 09:37:26.910 INF] Request starting HTTP/2 GET https://localhost:7101/api/Staff - null null
+[2025-04-18 09:37:26.919 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:37:26.921 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:37:26.922 INF] Request finished HTTP/2 GET https://localhost:7101/api/Staff - 401 0 null 12.2912ms
+[2025-04-18 09:40:56.986 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------163067071381956370106602 2148
+[2025-04-18 09:40:57.095 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/17/2025 9:50:23 AM', Current time (UTC): '4/18/2025 2:40:57 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+[2025-04-18 09:41:02.425 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/17/2025 9:50:23 AM', Current time (UTC): '4/18/2025 2:40:57 AM'.
+[2025-04-18 09:41:02.427 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:41:02.436 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:41:02.442 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 401 0 null 5456.7695ms
+[2025-04-18 09:45:43.868 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:45:43.993 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:45:43.994 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:45:43.997 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:45:43.998 INF] Hosting environment: Development
+[2025-04-18 09:45:43.998 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:45:44.336 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:45:44.497 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 160.9655ms
+[2025-04-18 09:45:45.084 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:45:45.280 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 195.4177ms
+[2025-04-18 09:45:49.384 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------712867806131231812700731 2148
+[2025-04-18 09:45:49.448 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/17/2025 9:50:23 AM', Current time (UTC): '4/18/2025 2:45:49 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+[2025-04-18 09:45:49.459 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/17/2025 9:50:23 AM', Current time (UTC): '4/18/2025 2:45:49 AM'.
+[2025-04-18 09:45:49.463 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:45:49.469 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:45:49.471 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 401 0 null 86.7133ms
+[2025-04-18 09:45:49.475 INF] Connection id "0HNBU4CEP01TH", Request id "0HNBU4CEP01TH:00000001": the application completed without reading the entire request body.
+[2025-04-18 09:46:38.199 INF] Application is shutting down...
+[2025-04-18 09:47:03.380 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:47:03.536 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:47:03.538 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:47:03.540 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:47:03.541 INF] Hosting environment: Development
+[2025-04-18 09:47:03.542 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:47:03.789 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:47:04.032 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 244.8716ms
+[2025-04-18 09:47:04.653 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:47:04.875 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 221.984ms
+[2025-04-18 09:47:18.959 INF] Request starting HTTP/2 POST https://localhost:7101/api/Auth/login - application/json 50
+[2025-04-18 09:47:18.990 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:47:19.016 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 09:47:19.302 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 09:47:20.058 INF] Executed DbCommand (39ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 09:47:20.155 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 849.3444ms.
+[2025-04-18 09:47:20.162 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 09:47:20.175 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1155.1073ms
+[2025-04-18 09:47:20.176 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 09:47:20.184 INF] Request finished HTTP/2 POST https://localhost:7101/api/Auth/login - 200 null application/json; charset=utf-8 1225.4123ms
+[2025-04-18 09:47:28.210 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------718110179758393387445090 2148
+[2025-04-18 09:47:28.235 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 09:47:28.245 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 09:47:28.250 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:47:28.256 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:47:28.258 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 401 0 null 47.4281ms
+[2025-04-18 09:47:28.261 INF] Connection id "0HNBU4D6ET3CL", Request id "0HNBU4D6ET3CL:00000001": the application completed without reading the entire request body.
+[2025-04-18 09:49:44.485 INF] Application is shutting down...
+[2025-04-18 09:49:57.778 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:49:58.008 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:49:58.010 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:49:58.013 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:49:58.014 INF] Hosting environment: Development
+[2025-04-18 09:49:58.015 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:49:58.491 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:49:58.718 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 227.6864ms
+[2025-04-18 09:49:59.962 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:50:00.095 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.4365ms
+[2025-04-18 09:50:03.923 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------942339662734338848415508 2148
+[2025-04-18 09:52:01.939 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 09:52:25.204 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 09:52:51.176 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'AdminOnly' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData, IEnumerable`1 policies)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-04-18 09:52:51.190 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 500 null text/plain; charset=utf-8 167266.9903ms
+[2025-04-18 09:52:51.196 INF] Connection id "0HNBU4EQGAJI9", Request id "0HNBU4EQGAJI9:00000001": the application completed without reading the entire request body.
+[2025-04-18 09:53:07.192 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------152143280794148591606797 2148
+[2025-04-18 09:53:47.875 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 09:53:47.883 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 09:53:47.884 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'AdminOnly' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData, IEnumerable`1 policies)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-04-18 09:53:47.887 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 500 null text/plain; charset=utf-8 40694.3007ms
+[2025-04-18 09:53:50.274 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------140226633459763790348347 2148
+[2025-04-18 09:53:50.276 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 09:53:50.279 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 09:53:50.280 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'AdminOnly' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData, IEnumerable`1 policies)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-04-18 09:53:50.282 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 500 null text/plain; charset=utf-8 8.8745ms
+[2025-04-18 09:53:50.285 INF] Connection id "0HNBU4EQGAJIB", Request id "0HNBU4EQGAJIB:00000002": the application completed without reading the entire request body.
+[2025-04-18 09:53:51.504 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------543511047753718830572514 2148
+[2025-04-18 09:53:51.509 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 09:53:51.515 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 09:53:51.517 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'AdminOnly' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData, IEnumerable`1 policies)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-04-18 09:53:51.520 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 500 null text/plain; charset=utf-8 16.0076ms
+[2025-04-18 09:53:51.523 INF] Connection id "0HNBU4EQGAJIB", Request id "0HNBU4EQGAJIB:00000003": the application completed without reading the entire request body.
+[2025-04-18 09:54:19.288 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:54:19.498 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:54:19.500 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:54:19.503 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:54:19.504 INF] Hosting environment: Development
+[2025-04-18 09:54:19.505 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:54:19.791 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:54:20.054 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 265.6862ms
+[2025-04-18 09:54:21.618 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:54:21.756 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.4297ms
+[2025-04-18 09:54:22.396 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------401582676795203464396155 2148
+[2025-04-18 09:54:34.499 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 09:54:34.530 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 09:54:34.534 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'AdminOnly' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData, IEnumerable`1 policies)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2025-04-18 09:54:34.549 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 500 null text/plain; charset=utf-8 12152.6806ms
+[2025-04-18 09:54:34.554 INF] Connection id "0HNBU4H8C2C5O", Request id "0HNBU4H8C2C5O:00000001": the application completed without reading the entire request body.
+[2025-04-18 09:55:18.035 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:55:18.236 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:55:18.237 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:55:18.240 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:55:18.241 INF] Hosting environment: Development
+[2025-04-18 09:55:18.242 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:55:18.914 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:55:19.154 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 241.0731ms
+[2025-04-18 09:55:20.489 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:55:20.678 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 188.7211ms
+[2025-04-18 09:55:26.873 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------131969167619214487280636 2148
+[2025-04-18 09:56:43.091 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 09:56:43.120 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 09:56:43.126 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 09:56:43.131 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 09:56:43.140 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 401 0 null 76267.0911ms
+[2025-04-18 09:56:43.144 INF] Connection id "0HNBU4HQ0MO1O", Request id "0HNBU4HQ0MO1O:00000001": the application completed without reading the entire request body.
+[2025-04-18 09:59:51.638 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 09:59:51.864 INF] Now listening on: https://localhost:7101
+[2025-04-18 09:59:51.867 INF] Now listening on: http://localhost:5230
+[2025-04-18 09:59:51.870 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 09:59:51.871 INF] Hosting environment: Development
+[2025-04-18 09:59:51.872 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 09:59:52.435 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 09:59:52.662 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 229.6402ms
+[2025-04-18 09:59:53.778 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 09:59:53.895 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.0667ms
+[2025-04-18 10:00:00.993 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------841987932718468785426652 2148
+[2025-04-18 10:01:00.121 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 10:01:00.147 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 10:01:00.153 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 10:01:00.158 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 10:01:00.160 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 401 0 null 59167.0575ms
+[2025-04-18 10:01:00.163 INF] Connection id "0HNBU4KBGTJOT", Request id "0HNBU4KBGTJOT:00000001": the application completed without reading the entire request body.
+[2025-04-18 10:01:03.918 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------379230955434973422297951 2148
+[2025-04-18 10:02:32.775 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 10:02:32.782 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 10:02:32.786 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 10:02:32.788 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 10:02:32.790 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 401 0 null 88871.0625ms
+[2025-04-18 10:02:32.791 INF] Connection id "0HNBU4KBGTJOV", Request id "0HNBU4KBGTJOV:00000001": the application completed without reading the entire request body.
+[2025-04-18 10:02:58.363 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 10:02:58.601 INF] Now listening on: https://localhost:7101
+[2025-04-18 10:02:58.604 INF] Now listening on: http://localhost:5230
+[2025-04-18 10:02:58.610 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 10:02:58.612 INF] Hosting environment: Development
+[2025-04-18 10:02:58.614 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 10:02:59.009 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 10:02:59.243 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 235.9781ms
+[2025-04-18 10:03:00.484 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 10:03:00.618 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 134.4445ms
+[2025-04-18 10:03:03.905 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------182273069165867828234440 2148
+[2025-04-18 10:04:19.300 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 10:04:19.326 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 10:04:19.331 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 10:04:19.337 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 10:04:19.345 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 401 0 null 75439.3532ms
+[2025-04-18 10:04:19.349 INF] Connection id "0HNBU4M34CJI2", Request id "0HNBU4M34CJI2:00000001": the application completed without reading the entire request body.
+[2025-04-18 10:09:09.952 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 10:09:10.237 INF] Now listening on: https://localhost:7101
+[2025-04-18 10:09:10.239 INF] Now listening on: http://localhost:5230
+[2025-04-18 10:09:10.243 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 10:09:10.244 INF] Hosting environment: Development
+[2025-04-18 10:09:10.244 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 10:09:10.392 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - null null
+[2025-04-18 10:09:10.571 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - 200 null text/html;charset=utf-8 176.8553ms
+[2025-04-18 10:09:11.626 INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - null null
+[2025-04-18 10:09:11.744 INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.1359ms
+[2025-04-18 10:09:28.746 INF] Request starting HTTP/1.1 GET https://localhost:7101/api/Staff - multipart/form-data; boundary=--------------------------180438678599293567808359 2148
+[2025-04-18 10:09:28.850 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 10:09:28.886 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 10:09:28.891 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 10:09:28.896 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 10:09:28.905 INF] Request finished HTTP/1.1 GET https://localhost:7101/api/Staff - 401 0 null 158.9794ms
+[2025-04-18 10:09:28.910 INF] Connection id "0HNBU4PHR2QKL", Request id "0HNBU4PHR2QKL:00000001": the application completed without reading the entire request body.
+[2025-04-18 10:11:12.644 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 10:11:12.753 INF] Now listening on: http://localhost:5230
+[2025-04-18 10:11:12.756 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 10:11:12.757 INF] Hosting environment: Development
+[2025-04-18 10:11:12.757 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 10:11:13.212 INF] Request starting HTTP/1.1 GET http://localhost:5230/swagger/index.html - null null
+[2025-04-18 10:11:13.373 INF] Request finished HTTP/1.1 GET http://localhost:5230/swagger/index.html - 200 null text/html;charset=utf-8 161.7488ms
+[2025-04-18 10:11:14.497 INF] Request starting HTTP/1.1 GET http://localhost:5230/swagger/v1/swagger.json - null null
+[2025-04-18 10:11:14.649 INF] Request finished HTTP/1.1 GET http://localhost:5230/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 151.9106ms
+[2025-04-18 10:11:23.985 INF] Request starting HTTP/1.1 POST http://localhost:5230/api/Auth/login - application/json 50
+[2025-04-18 10:11:24.019 INF] Executing endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 10:11:24.037 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature DefaultRes`1[System.String] Login(WebApplication1.Dto.LoginRequest) on controller WebApplication1.Controller.AuthController (WebApplication1).
+[2025-04-18 10:11:24.309 INF] Executing action method WebApplication1.Controller.AuthController.Login (WebApplication1) - Validation state: "Valid"
+[2025-04-18 10:11:24.974 INF] Executed DbCommand (32ms) [Parameters=[@__userName_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`user_id`, `u`.`password`, `u`.`username`
+FROM `Users` AS `u`
+WHERE (`u`.`username` = @__userName_0) AND (`u`.`password` = @__password_1)
+LIMIT 1
+[2025-04-18 10:11:25.061 INF] Executed action method WebApplication1.Controller.AuthController.Login (WebApplication1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 748.5921ms.
+[2025-04-18 10:11:25.069 INF] Executing ObjectResult, writing value of type 'DefaultRes`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-04-18 10:11:25.081 INF] Executed action WebApplication1.Controller.AuthController.Login (WebApplication1) in 1039.5253ms
+[2025-04-18 10:11:25.082 INF] Executed endpoint 'WebApplication1.Controller.AuthController.Login (WebApplication1)'
+[2025-04-18 10:11:25.090 INF] Request finished HTTP/1.1 POST http://localhost:5230/api/Auth/login - 200 null application/json; charset=utf-8 1105.2814ms
+[2025-04-18 10:11:35.602 INF] Request starting HTTP/1.1 GET http://localhost:5230/api/Staff - null null
+[2025-04-18 10:11:35.629 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 10:11:35.639 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 10:11:35.643 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 10:11:35.648 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 10:11:35.649 INF] Request finished HTTP/1.1 GET http://localhost:5230/api/Staff - 401 0 null 47.3897ms
+[2025-04-18 10:11:53.872 INF] Request starting HTTP/1.1 GET http://localhost:5230/api/Staff - multipart/form-data; boundary=--------------------------719168187699448638335553 2148
+[2025-04-18 10:11:53.875 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14101: Unable to decode the payload '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonException: IDX11020: The JSON value of type: 'String', could not be converted to 'JsonTokenType.Number'. Reading: 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.iat', Position: '67', CurrentDepth: '1', BytesConsumed: '89'.
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.ReadLong(Utf8JsonReader& reader, String propertyName, String className, Boolean read)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreatePayloadClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+[2025-04-18 10:11:53.877 INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+[2025-04-18 10:11:53.879 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (ADMIN)
+[2025-04-18 10:11:53.880 INF] AuthenticationScheme: Bearer was challenged.
+[2025-04-18 10:11:53.881 INF] Request finished HTTP/1.1 GET http://localhost:5230/api/Staff - 401 0 null 8.9664ms
+[2025-04-18 10:13:03.516 INF] Application is shutting down...
+[2025-04-18 10:14:41.894 INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-04-18 10:14:42.015 INF] Now listening on: http://localhost:5230
+[2025-04-18 10:14:42.019 INF] Application started. Press Ctrl+C to shut down.
+[2025-04-18 10:14:42.020 INF] Hosting environment: Development
+[2025-04-18 10:14:42.020 INF] Content root path: D:\NET\WebApplication1\WebApplication1
+[2025-04-18 10:14:42.444 INF] Request starting HTTP/1.1 GET http://localhost:5230/swagger/index.html - null null
+[2025-04-18 10:14:42.599 INF] Request finished HTTP/1.1 GET http://localhost:5230/swagger/index.html - 200 null text/html;charset=utf-8 155.6556ms
+[2025-04-18 10:14:43.059 INF] Request starting HTTP/1.1 GET http://localhost:5230/swagger/v1/swagger.json - null null
+[2025-04-18 10:14:43.256 INF] Request finished HTTP/1.1 GET http://localhost:5230/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 198.7429ms
+[2025-04-18 10:14:52.557 INF] Application is shutting down...

@@ -1,7 +1,8 @@
 
+using Confluent.Kafka;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-
+using ProductWebApi.ProductService;
 using Serilog;
 using WebApplication1.Configs;
 using WebApplication1.Data;
@@ -78,6 +79,18 @@ builder.Services.AddScoped<StaffRepository>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IStaffService, StaffService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+
+var config = new ProducerConfig
+{
+    BootstrapServers = "localhost:9092"
+};
+
+builder.Services.AddSingleton<IProducer<Null, string>>(sp =>
+
+     new ProducerBuilder<Null, string>(config).Build()
+);
+
+builder.Services.AddScoped<IProductService , ProductService>();
 
 // Add controllers
 builder.Services.AddControllers();

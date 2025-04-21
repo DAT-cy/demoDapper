@@ -2,10 +2,11 @@
 using ClassLibrary1.DAL.DALDepartmentService;
 using ClassLibrary1.DAL.DTOS.DepartmentDto;
 using ClassLibrary1.DAL.DTOS.DepartmentModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using YourNamespace.Common;
 
-
+[Authorize(Roles = "ADMIN")]
 [ApiController]
 [Route("[controller]")]
 public class DALDepartmentController : ControllerBase

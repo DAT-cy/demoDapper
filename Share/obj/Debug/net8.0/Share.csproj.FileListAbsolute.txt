@@ -1,0 +1,12 @@
+D:\NET\WebApplication1\Share\bin\Debug\net8.0\Share.deps.json
+D:\NET\WebApplication1\Share\bin\Debug\net8.0\Share.dll
+D:\NET\WebApplication1\Share\bin\Debug\net8.0\Share.pdb
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\Share.GeneratedMSBuildEditorConfig.editorconfig
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\Share.AssemblyInfoInputs.cache
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\Share.AssemblyInfo.cs
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\Share.csproj.CoreCompileInputs.cache
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\Share.sourcelink.json
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\Share.dll
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\refint\Share.dll
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\Share.pdb
+D:\NET\WebApplication1\Share\obj\Debug\net8.0\ref\Share.dll

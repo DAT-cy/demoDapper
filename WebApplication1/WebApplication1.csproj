@@ -34,6 +34,9 @@
     <ItemGroup>
       <ProjectReference Include="..\ClassLibrary1.Auth\ClassLibrary1.Auth.csproj" />
       <ProjectReference Include="..\ClassLibrary1.DAL\ClassLibrary1.DAL.csproj" />
+      <ProjectReference Include="..\OrderApi\OrderApi.csproj" />
+      <ProjectReference Include="..\ProductWebApi\ProductWebApi.csproj" />
+      <ProjectReference Include="..\Share\Share.csproj" />
     </ItemGroup>
 
 </Project>
